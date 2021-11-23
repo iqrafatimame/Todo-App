@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+.main-div{
+    width: 425px;
+    height: auto;
+    margin: 100px auto;
+    padding: 20px 20px 9px;
+
+    background: #9dd2ea;
+    background: linear-gradient(#6957df, #6a5acd);
+    border-radius: 3px;
+}
+.todo-header{
+  text-align: center;
+}
+
+.todo-app{
+  margin-bottom: 30px;
+  border: 3px solid rgb(238, 177, 238);
+  border-radius: 3px;
+  display: flex;
+  align-items: flex-start;
+
+}
+h1{
+  margin: 20px;
+  color: rgb(19, 19, 61);
+}
+#task{
+  width: 80%;
+  flex: 3;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 18px 20px;
+  border: #555;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#task[type=text]:focus{
+  outline: 0.5px solid #555;
+}
+
+.add-btn{
+  background-color: #6a5acd;
+  height: 36px;
+  flex: 1;
+  padding: 10px 10px;
+  border: none;
+  color: white;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.add-btn:hover{
+  background-color: rgb(116, 14, 116);
+
+}
+
+.todo-items-div{
+  text-align: left;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+ul li{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 8px;
+  font-size: 18px;
+  user-select: none;
+  transition: 0.2;
+  direction: none;
+
+}
+ul li  .checked {
+  color: rgb(100, 92, 92);
+  text-decoration: line-through;
+}
+
+ul li p{
+  flex-grow: 1;
+  padding-left: 16px;
+}
+.delete-button{
+  color: red;
+  text-decoration: underline;
+}
