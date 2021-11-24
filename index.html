@@ -5,21 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Todo-App</title>
 </head>
 <body>
+    <div class="app">
     <div class="main-div">
         <div class="todo-header">
-            <h1>TODO APP </h1>
-        <div class="todo-app">
-            <input id="task" type="text" placeholder="Enter a Task">
-            <div onClick="addTodo()" class="add-btn">ADD</div>
-        </div>
+            <h1> =: TODO APP := </h1>
+        <!-- <i class="fas fa-trash-alt"></i> -->
+        <form class="todo-app" onsubmit="addTodo()" id="form">
+            <input id="task" type="text" placeholder="What will you do today?">
+            <input type ="submit" class="add-btn" value="ADD">
+        </form>
         <div class="todo-items-div">
         <ul id="todo-items-list">
             <!-- Todo items will show  up here-->
         </ul>
         </div>
+    </div>
     </div>
     <script src="main.js"></script>
 </body>
