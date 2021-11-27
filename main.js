@@ -9,13 +9,17 @@ const form = document.getElementById('form');
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 });
+var text = document.getElementById("error-text")
+
 
 function addTodo(e) {
     const input = document.getElementById("task");
     if (input.value == "") {
-        alert("Please add a todo")
+        setError(task)
     }
     else {
+        text.innerHTML = ""
+        task.style.borderColor =  ""
         todos.push({
             text: input.value,
             isCompleted: false
@@ -23,6 +27,13 @@ function addTodo(e) {
     }
     input.value = "" // clear input field value
     displayTodos()
+}
+
+
+function setError(){
+    text.innerHTML = "Todo can't be empty"
+    text.style.color = "#ff0000"
+    task.style.borderColor =  "#ff0000"
 }
 
 function toggleTodo(todoIndex) {
@@ -78,8 +89,6 @@ function createTodoText(todo, todoIndex) {
 function createDeleteButton(todo, todoIndex) {
     const deleteButton = document.createElement("i")
     deleteButton.className = "fas fa-trash-alt"
-    // deleteButton.innerText = "Delete"
-    // deleteButton.className = "delete-button"
     deleteButton.addEventListener("click", e => {
         e.preventDefault()
         deleteTodo(todoIndex)

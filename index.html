@@ -9,13 +9,16 @@
     <title>Todo-App</title>
 </head>
 <body>
-    <div class="app">
     <div class="main-div">
         <div class="todo-header">
-            <h1> =: TODO APP := </h1>
+            <h1> TODO APP  </h1>
+        </div>
         <!-- <i class="fas fa-trash-alt"></i> -->
         <form class="todo-app" onsubmit="addTodo()" id="form">
-            <input id="task" type="text" placeholder="What will you do today?">
+            <div class="todo-input">
+                <input id="task" type="text" placeholder="What will you do today?">
+                <span id="error-text"></span>
+            </div>
             <input type ="submit" class="add-btn" value="ADD">
         </form>
         <div class="todo-items-div">
@@ -23,7 +26,6 @@
             <!-- Todo items will show  up here-->
         </ul>
         </div>
-    </div>
     </div>
     <script src="main.js"></script>
 </body>

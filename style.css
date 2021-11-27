@@ -3,18 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: monospace;
+
   }
   
-
 .main-div{
     width: 625px;
     height: auto;
     margin: 100px auto;
     padding: 20px 20px 9px;
-
-    background: #9dd2ea;
-    background: linear-gradient(#6957df, #6a5acd);
     border-radius: 3px;
+    outline: 2px solid grey;
+    background: white;
 }
 
 .todo-header{
@@ -23,29 +22,38 @@
 
 .todo-app{
   margin-bottom: 30px;
-  border: 3px solid rgb(238, 177, 238);
   border-radius: 3px;
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
+}
 
+span{
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.todo-input{
+  display: flex;
+  flex-direction: column;
+  flex: 4;
 }
 
 h1{
   margin: 20px;
   color: rgb(19, 19, 61);
-  font-weight: bolder;
+  font-family: sans-serif;
+  font-weight: 900;
   font-size: 36px;
   letter-spacing: 2px;
 }
 
 #task{
-  width: 80%;
-  flex: 3;
   font-weight: 900;
   height: 40px;
-  box-sizing: border-box;
+  border-radius: 0px;
+  outline: none;
   padding: 18px 20px;
-  border: #555;
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -56,7 +64,7 @@ h1{
 
 .add-btn{
   background-color: #6a5acd;
-  height: 36px;
+  height: 40px;
   flex: 1;
   padding: 10px 10px;
   border: none;
@@ -67,12 +75,12 @@ h1{
 
 .add-btn:hover{
   background-color: rgb(116, 14, 116);
-
 }
 
 .todo-items-div{
   text-align: left;
   background-color: white;
+  border: 3px solid rgb(238, 177, 238);
   border-radius: 5px;
   padding: 10px;
 }
